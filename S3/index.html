@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>My first bot</title>
+    <style>
+        body {
+            background-color: rgb(88, 144, 100);
+        }
+        textarea {
+            background-color: black;
+            color: white;
+        }
+    </style>
+ 
+	<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="apigClient.js"></script>
+	
+   <script src="jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+ 
+
+</head>
+<body style="text-align:center;">
+    <textarea readonly="true" id="botChat" style="text-align:left; position:fixed; display:block; top:3vh;
+    border:1px solid black; width:92.5vw; margin-left:1%; margin-right:2.25%; height:75vh; resize:none;
+    font-family:Courier; overflow-y:auto; user-select:none; font-size:3vw;"></textarea>
+    <p style="position:absolute; border:1px solid black; top:78vh; left:12.25vw; width:75vw;">
+        <input type="text" placeholder="Ask a question"
+               onKeypress="enterButton(event, document.getElementsByTagName('input')[0].value);"
+               style="color:red; background-color:black; width:79%;">
+        <button onClick="answer(document.getElementsByTagName('input')[0].value)">Talk To Me</button>
+    </p>
+</body>
+</html>
